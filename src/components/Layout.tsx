@@ -52,7 +52,7 @@ export function Layout() {
                 />
               </Link>
               <p className="text-gray-500 text-center md:text-left">
-                &copy; {new Date().getFullYear()} ExtremeReach Lda. Marketing + Inteligência Artificial.
+                &copy; {new Date().getFullYear()} ExtremeReach Lda.
               </p>
             </div>
             <div className="flex flex-col items-center md:items-end gap-2 text-gray-400 text-sm">
