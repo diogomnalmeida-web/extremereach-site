@@ -19,7 +19,7 @@ const services = [
     icon: Brain,
     title: 'IA Aplicada ao Marketing',
     description: 'Automação, análise de dados, segmentação inteligente e personalização de experiências em tempo real.',
-    href: '#',
+    href: '/servicos/ia-aplicada-ao-marketing',
   },
   {
     icon: Sparkles,
