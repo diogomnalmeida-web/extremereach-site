@@ -59,6 +59,12 @@ export function Layout() {
               <p>Parque Empresarial da Baía do Tejo</p>
               <p>R. 2, Edifício n.º 23, 2830-138 Barreiro</p>
               <a
+                href="mailto:geral@extremereach.pt"
+                className="text-[#c7d410] hover:text-[#b0bd0f] transition-colors"
+              >
+                geral@extremereach.pt
+              </a>
+              <a
                 href="https://wa.me/351967370959"
                 target="_blank"
                 rel="noopener noreferrer"
