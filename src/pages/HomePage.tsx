@@ -13,7 +13,7 @@ const services = [
     icon: Lightbulb,
     title: 'Marketing & Conteúdo',
     description: 'Criamos campanhas, storytelling e conteúdos que fortalecem a presença da marca e a ligação com o público.',
-    href: '#',
+    href: '/servicos/marketing-e-conteudo',
   },
   {
     icon: Brain,
