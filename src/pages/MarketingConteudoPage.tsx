@@ -13,6 +13,8 @@ import {
   UserCheck,
   BarChart3,
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 
 const services = [
   { icon: Share2, label: 'Gestão de redes sociais' },
@@ -37,14 +39,37 @@ export function MarketingConteudoPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Marketing e Conteúdo | Extreme Reach</title>
+        <meta name="description" content="Criamos campanhas, storytelling e conteúdos que fortalecem a presença da marca. Redes sociais, vídeo, email marketing e funis de conversão." />
+        <link rel="canonical" href="https://extremereach.pt/servicos/marketing-e-conteudo" />
+        <meta property="og:title" content="Marketing e Conteúdo | Extreme Reach" />
+        <meta property="og:description" content="Criamos campanhas, storytelling e conteúdos que fortalecem a presença da marca. Redes sociais, vídeo, email marketing e funis de conversão." />
+        <meta property="og:url" content="https://extremereach.pt/servicos/marketing-e-conteudo" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Marketing e Conteúdo",
+          "description": "Criamos campanhas, storytelling e conteúdos que fortalecem a presença da marca. Redes sociais, vídeo, email marketing e funis de conversão.",
+          "provider": { "@type": "Organization", "name": "Extreme Reach", "url": "https://extremereach.pt" },
+          "url": "https://extremereach.pt/servicos/marketing-e-conteudo"
+        })}</script>
+      </Helmet>
+
       {/* Hero */}
-      <section className="relative pt-32 pb-24 px-6 overflow-hidden">
+      <section className="relative pb-24 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#1b1a19] via-black to-[#1b1a19]"></div>
         <div className="absolute inset-0 opacity-15">
           <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-[#c7d410] rounded-full filter blur-[160px]"></div>
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto">
+        <Breadcrumbs items={[
+          { label: 'Home', href: '/' },
+          { label: 'Serviços' },
+          { label: 'Marketing & Conteúdo' },
+        ]} />
+
+        <div className="relative z-10 max-w-5xl mx-auto pt-6">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-14 h-14 rounded-2xl bg-[#c7d410]/10 border border-[#c7d410]/30 flex items-center justify-center">
               <Lightbulb className="w-7 h-7 text-[#c7d410]" />

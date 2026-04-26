@@ -19,6 +19,8 @@ import {
   MonitorPlay,
   Gauge,
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 
 const automacao = [
   { icon: Zap, label: 'Automação de campanhas de marketing' },
@@ -101,15 +103,38 @@ export function IAMarketingPage() {
 
   return (
     <>
+      <Helmet>
+        <title>IA Aplicada ao Marketing | Extreme Reach</title>
+        <meta name="description" content="Automação de campanhas, análise de dados, segmentação inteligente e desenvolvimento de miniapps. Soluções de IA para escalar o seu marketing." />
+        <link rel="canonical" href="https://extremereach.pt/servicos/ia-aplicada-ao-marketing" />
+        <meta property="og:title" content="IA Aplicada ao Marketing | Extreme Reach" />
+        <meta property="og:description" content="Automação de campanhas, análise de dados, segmentação inteligente e desenvolvimento de miniapps. Soluções de IA para escalar o seu marketing." />
+        <meta property="og:url" content="https://extremereach.pt/servicos/ia-aplicada-ao-marketing" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "IA Aplicada ao Marketing",
+          "description": "Automação de campanhas, análise de dados, segmentação inteligente e desenvolvimento de miniapps. Soluções de IA para escalar o seu marketing.",
+          "provider": { "@type": "Organization", "name": "Extreme Reach", "url": "https://extremereach.pt" },
+          "url": "https://extremereach.pt/servicos/ia-aplicada-ao-marketing"
+        })}</script>
+      </Helmet>
+
       {/* Hero */}
-      <section className="relative pt-32 pb-24 px-6 overflow-hidden">
+      <section className="relative pb-24 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#1b1a19] via-black to-[#1b1a19]"></div>
         <div className="absolute inset-0 opacity-15">
           <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-[#c7d410] rounded-full filter blur-[160px]"></div>
           <div className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] bg-[#c7d410] rounded-full filter blur-[120px] opacity-50"></div>
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto">
+        <Breadcrumbs items={[
+          { label: 'Home', href: '/' },
+          { label: 'Serviços' },
+          { label: 'IA Aplicada ao Marketing' },
+        ]} />
+
+        <div className="relative z-10 max-w-5xl mx-auto pt-6">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-14 h-14 rounded-2xl bg-[#c7d410]/10 border border-[#c7d410]/30 flex items-center justify-center">
               <Brain className="w-7 h-7 text-[#c7d410]" />

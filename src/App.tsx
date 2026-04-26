@@ -5,6 +5,7 @@ import { EstrategiaConsultoriaPage } from './pages/EstrategiaConsultoriaPage';
 import { MarketingConteudoPage } from './pages/MarketingConteudoPage';
 import { IAMarketingPage } from './pages/IAMarketingPage';
 import { EventosAtivacoesPage } from './pages/EventosAtivacoes';
+import { NotFoundPage } from './pages/NotFoundPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/servicos/marketing-e-conteudo" element={<MarketingConteudoPage />} />
           <Route path="/servicos/ia-aplicada-ao-marketing" element={<IAMarketingPage />} />
           <Route path="/servicos/eventos-e-ativacoes" element={<EventosAtivacoesPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

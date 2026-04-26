@@ -1,5 +1,6 @@
 import { ArrowRight, Target, Lightbulb, Brain, Sparkles, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { HeroText } from '../components/HeroText';
 
 const services = [
@@ -32,6 +33,15 @@ const services = [
 export function HomePage() {
   return (
     <>
+      <Helmet>
+        <title>Extreme Reach | Estratégia, Marketing e Experiências de Marca</title>
+        <meta name="description" content="Criamos estratégias de marketing, conteúdos e experiências de marca que geram resultados. IA, eventos e soluções à medida para o seu negócio." />
+        <link rel="canonical" href="https://extremereach.pt" />
+        <meta property="og:title" content="Extreme Reach | Estratégia, Marketing e Experiências de Marca" />
+        <meta property="og:description" content="Criamos estratégias de marketing, conteúdos e experiências de marca que geram resultados. IA, eventos e soluções à medida para o seu negócio." />
+        <meta property="og:url" content="https://extremereach.pt" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-[#1b1a19] via-black to-[#1b1a19]"></div>

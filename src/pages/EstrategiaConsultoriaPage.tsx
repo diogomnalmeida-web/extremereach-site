@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import { ArrowRight, Target, Search, Crosshair, PenTool, Route, CheckCircle2 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 
 const services = [
   'Definição de estratégia de marketing e comunicação',
@@ -48,14 +50,37 @@ export function EstrategiaConsultoriaPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Estratégia e Consultoria de Marketing | Extreme Reach</title>
+        <meta name="description" content="Desenhamos planos de comunicação orientados a objetivos concretos. Posicionamento de marca, planeamento de campanhas e análise de mercado." />
+        <link rel="canonical" href="https://extremereach.pt/servicos/estrategia-e-consultoria" />
+        <meta property="og:title" content="Estratégia e Consultoria de Marketing | Extreme Reach" />
+        <meta property="og:description" content="Desenhamos planos de comunicação orientados a objetivos concretos. Posicionamento de marca, planeamento de campanhas e análise de mercado." />
+        <meta property="og:url" content="https://extremereach.pt/servicos/estrategia-e-consultoria" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Estratégia e Consultoria de Marketing",
+          "description": "Desenhamos planos de comunicação orientados a objetivos concretos. Posicionamento de marca, planeamento de campanhas e análise de mercado.",
+          "provider": { "@type": "Organization", "name": "Extreme Reach", "url": "https://extremereach.pt" },
+          "url": "https://extremereach.pt/servicos/estrategia-e-consultoria"
+        })}</script>
+      </Helmet>
+
       {/* Hero */}
-      <section className="relative pt-32 pb-24 px-6 overflow-hidden">
+      <section className="relative pb-24 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#1b1a19] via-black to-[#1b1a19]"></div>
         <div className="absolute inset-0 opacity-15">
           <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-[#c7d410] rounded-full filter blur-[160px]"></div>
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto">
+        <Breadcrumbs items={[
+          { label: 'Home', href: '/' },
+          { label: 'Serviços' },
+          { label: 'Estratégia e Consultoria' },
+        ]} />
+
+        <div className="relative z-10 max-w-5xl mx-auto pt-6">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-14 h-14 rounded-2xl bg-[#c7d410]/10 border border-[#c7d410]/30 flex items-center justify-center">
               <Target className="w-7 h-7 text-[#c7d410]" />
