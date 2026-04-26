@@ -25,7 +25,7 @@ const services = [
     icon: Sparkles,
     title: 'Eventos e Ativações',
     description: 'Transformamos marcas em experiências memoráveis, reforçando a presença no mundo físico e digital.',
-    href: '#',
+    href: '/servicos/eventos-e-ativacoes',
   },
 ];
 
